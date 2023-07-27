@@ -20,6 +20,12 @@ and transform to Json.
 }
 ```
 
+#### Run
+
+```
+dotnet run --project App
+```
+
 ---
 
 @ Carlos Costa - 2023

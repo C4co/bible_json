@@ -12,23 +12,23 @@ namespace Repositories
         NewTestament = 1
     }
 
-    class CatholicBibleRepository
+    class BibleRepository
     {
         private readonly HttpClient _httpClient;
 
-        public CatholicBibleRepository(HttpClient httpClient)
+        public BibleRepository(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
 
         //get books
-        public async Task<List<Book>> GetBooks(BookType bookType)
+        public async Task<List<Book>> GetBooks(BookType bookType, string url)
         {
             try
             {
                 List<Book> list = new List<Book>();
 
-                var response = await _httpClient.GetAsync("https://www.bibliaonline.com.br/vc/livros");
+                var response = await _httpClient.GetAsync(url);
 
                 var reponseBody = await response.Content.ReadAsStringAsync();
 

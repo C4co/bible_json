@@ -2,11 +2,11 @@ namespace Domain
 {
     class Bible
     {
-        public List<Book> books { get; set; }
+        public List<Book> Books { get; set; }
 
         public Bible(List<Book> books)
         {
-            this.books = books;
+            this.Books = books;
         }
     }
 }

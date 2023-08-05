@@ -26,13 +26,13 @@ namespace Repositories
         {
             try
             {
-                List<Book> list = new List<Book>();
+                List<Book> list = new();
 
                 var response = await _httpClient.GetAsync(url);
 
                 var reponseBody = await response.Content.ReadAsStringAsync();
 
-                HtmlDocument htmlDoc = new HtmlDocument();
+                HtmlDocument htmlDoc = new();
 
                 htmlDoc.LoadHtml(reponseBody);
 
@@ -49,9 +49,9 @@ namespace Repositories
 
                     var bookLink = link.Attributes["href"].Value ?? "null";
 
-                    var abbrev = bookLink.Substring(bookLink.Length - 3).Replace("/", "");
+                    var abbrev = bookLink[^3..].Replace("/", "");
 
-                    Book book = new Book(
+                    Book book = new(
                         name: bookName,
                         link: bookLink,
                         abbrev: abbrev,
@@ -69,16 +69,16 @@ namespace Repositories
             }
         }
 
-        public async Task<int> getNumberOfChapters(Book book)
+        public async Task<int> GetNumberOfChapters(Book book)
         {
             try
             {
-                var response = await _httpClient.GetAsync(book.link + "/1");
+                var response = await _httpClient.GetAsync(book.Link + "/1");
 
                 //response body as utf8 string
                 var reponseBody = await response.Content.ReadAsStringAsync();
 
-                HtmlDocument htmlDoc = new HtmlDocument();
+                HtmlDocument htmlDoc = new();
 
                 htmlDoc.LoadHtml(reponseBody);
 
@@ -99,13 +99,13 @@ namespace Repositories
         {
             try
             {
-                List<String> list = new List<String>();
+                List<string> list = new();
 
-                var response = await _httpClient.GetAsync($"{book.link}/{chapter}");
+                var response = await _httpClient.GetAsync($"{book.Link}/{chapter}");
 
                 var reponseBody = await response.Content.ReadAsStringAsync();
 
-                HtmlDocument htmlDoc = new HtmlDocument();
+                HtmlDocument htmlDoc = new();
 
                 htmlDoc.LoadHtml(reponseBody);
 

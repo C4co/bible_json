@@ -2,12 +2,12 @@ namespace Domain
 {
     class Book
     {
-        public string name { get; set; }
-        public string link { get; set; }
-        public string abbrev { get; set; }
-        public int testament { get; set; }
-        public int? numberOfChapters { get; set; }
-        public List<List<string>>? chapters { get; set; }
+        public string Name { get; set; }
+        public string Link { get; set; }
+        public string Abbrev { get; set; }
+        public int Testament { get; set; }
+        public int? NumberOfChapters { get; set; }
+        public List<List<string>>? Chapters { get; set; }
 
         public Book(
             string name,
@@ -17,11 +17,11 @@ namespace Domain
             int? numberOfChapters = null
         )
         {
-            this.name = name;
-            this.link = link;
-            this.abbrev = abbrev;
-            this.chapters = chapters;
-            this.numberOfChapters = numberOfChapters;
+            this.Name = name;
+            this.Link = link;
+            this.Abbrev = abbrev;
+            this.Chapters = chapters;
+            this.NumberOfChapters = numberOfChapters;
         }
     }
 };

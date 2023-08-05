@@ -4,9 +4,9 @@ using System.Text.Json;
 
 class Program
 {
-    static public async Task Main(string[] args)
+    static public async Task Main()
     {
-        BibleRepository catholicBibleRepository = new BibleRepository(
+        BibleRepository catholicBibleRepository = new(
             new HttpClient()
         );
 
@@ -19,24 +19,31 @@ class Program
             "https://www.bibliaonline.com.br/vc/livros"
         );
 
-        Bible bible = new Bible(oldTestamentBooks.Concat(newTestamentBooks).ToList());
+        Bible bible = new(oldTestamentBooks.Concat(newTestamentBooks).ToList());
 
-        foreach (var book in bible.books)
+        foreach (var book in bible.Books)
         {
-            var numberOfChapters = await catholicBibleRepository.getNumberOfChapters(book);
-            book.numberOfChapters = numberOfChapters;
+            var numberOfChapters = await catholicBibleRepository.GetNumberOfChapters(book);
+            book.NumberOfChapters = numberOfChapters;
 
             for (int i = 1; i <= numberOfChapters; i++)
             {
                 var chapter = await catholicBibleRepository.GetVerses(book, i);
 
-                Console.WriteLine($"Processing... {book.name} Chapter: {i}");
+                Console.WriteLine($"Processing... {book.Name} Chapter: {i}");
 
-                book.chapters?.Add(chapter);
+                book.Chapters?.Add(chapter);
             }
         }
 
-        var json = JsonSerializer.Serialize(bible);
+        var options = new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            WriteIndented = true
+        };
+
+        var json = JsonSerializer.Serialize(bible, options);
+
         File.WriteAllText("bible_pt-br.json", json);
     }
 }

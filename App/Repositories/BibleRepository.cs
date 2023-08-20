@@ -63,7 +63,7 @@ namespace Repositories
 
                 return list;
             }
-            catch (System.Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -88,7 +88,7 @@ namespace Repositories
 
                 return numberOfChapters;
             }
-            catch (System.Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -124,7 +124,7 @@ namespace Repositories
 
                 return list;
             }
-            catch (System.Exception)
+            catch (Exception)
             {
                 throw;
             }

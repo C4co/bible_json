@@ -17,11 +17,11 @@ namespace Domain
             int? numberOfChapters = null
         )
         {
-            this.Name = name;
-            this.Link = link;
-            this.Abbrev = abbrev;
-            this.Chapters = chapters;
-            this.NumberOfChapters = numberOfChapters;
+            Name = name;
+            Link = link;
+            Abbrev = abbrev;
+            Chapters = chapters;
+            NumberOfChapters = numberOfChapters;
         }
     }
 };

@@ -1,12 +1,19 @@
-namespace Domain
+using System.Text.Json.Serialization;
+
+namespace BibleJson.Domain
 {
-    class Bible
+    public class Bible
     {
+        [JsonPropertyName("books")]
         public List<Book> Books { get; set; }
 
-        public Bible(List<Book> books)
+        [JsonPropertyName("lang")]
+        public string Lang { get; set; }
+
+        public Bible(List<Book> books, string lang)
         {
-            this.Books = books;
+            Books = books;
+            Lang = lang;
         }
     }
 }

@@ -4,7 +4,7 @@ Script to extract content from [Biblia online](https://www.bibliaonline.com.br/v
 and transform to Json.
 
 ### Format
-```json
+```js
 {
   books: {
     [

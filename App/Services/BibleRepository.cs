@@ -4,7 +4,7 @@ using Domain;
 
 using HtmlAgilityPack;
 
-namespace Repositories
+namespace Services
 {
     public enum BookType
     {
@@ -12,11 +12,11 @@ namespace Repositories
         NewTestament = 1
     }
 
-    class BibleRepository
+    class BibleService
     {
         private readonly HttpClient _httpClient;
 
-        public BibleRepository(HttpClient httpClient)
+        public BibleService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }

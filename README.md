@@ -3,8 +3,8 @@
 Script to extract content from [Biblia online](https://www.bibliaonline.com.br/vc)
 and transform to Json.
 
-#### Format
-```
+### Format
+```json
 {
   books: {
     [
@@ -20,7 +20,7 @@ and transform to Json.
 }
 ```
 
-#### Run
+### Run
 
 ```
 dotnet run --project App

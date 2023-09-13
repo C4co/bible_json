@@ -1,4 +1,4 @@
-﻿using Repositories;
+﻿using Services;
 using Domain;
 using System.Text.Json;
 
@@ -6,7 +6,7 @@ class Program
 {
     static public async Task Main()
     {
-        BibleRepository catholicBibleRepository = new(
+        BibleService catholicBibleRepository = new(
             new HttpClient()
         );
 

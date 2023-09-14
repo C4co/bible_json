@@ -1,11 +1,14 @@
 # Bible JSON
 
-Script to extract content from [Biblia online](https://www.bibliaonline.com.br/vc)
+[![.NET](https://github.com/C4co/bible_json/actions/workflows/dotnet.yml/badge.svg)](https://github.com/C4co/bible_json/actions/workflows/dotnet.yml)
+
+Extract content from [Biblia online](https://www.bibliaonline.com.br/vc)
 and transform to Json.
 
-### Format
+### Json Format
 ```js
 {
+  lang: string
   books: {
     [
       {
@@ -24,6 +27,12 @@ and transform to Json.
 
 ```
 dotnet run --project App
+```
+
+### Tests
+
+```
+dotnet run test
 ```
 
 ---

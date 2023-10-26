@@ -58,7 +58,7 @@ class Program
     public static async Task Main(string[] args)
     {
         await Process(
-            url: "https://www.bibliaonline.com.br/vc/livros",
+            url: "https://www.bibliaonline.com.br/acf/livros",
             lang: "pt-br",
             fileName: "bible_pt-br.json"
         );

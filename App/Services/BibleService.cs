@@ -1,5 +1,3 @@
-using System.Text.RegularExpressions;
-
 using BibleJson.Domain;
 
 using HtmlAgilityPack;
@@ -112,9 +110,8 @@ namespace BibleJson.Services
                 foreach (var span in spans!)
                 {
                     var verse = span.InnerText;
-                    var decodedVerse = Regex.Unescape(verse);
 
-                    list.Add(decodedVerse);
+                    list.Add(verse);
                 }
 
                 return list;

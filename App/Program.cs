@@ -68,5 +68,11 @@ class Program
             lang: "en",
             fileName: "bible_en.json"
         );
+
+        await Process(
+            url: "https://www.bibliaonline.com.br/bm1844/livros",
+            lang: "fr",
+            fileName: "bible_fr.json"
+        );
     }
 }

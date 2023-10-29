@@ -5,10 +5,13 @@
 Extract content from [Biblia online](https://www.bibliaonline.com.br/vc)
 and transform to Json.
 
-| Langs |     |
-| ----- | --- |
-| PT-br | ✅   |
-| en    | ✅   |
+| Langs              | json | gzip |
+| ------------------ | ---- | ---- |
+| Portuguese - pt-br | ✅    | ✅    |
+| English - en       | ✅    | ✅    |
+| Spanish - es       | ✅    | ✅    |
+| Italian - it       | ✅    | ✅    |
+| French - fr        | ✅    | ✅    |
 
 ### Json Format
 ```js

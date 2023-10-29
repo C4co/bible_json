@@ -3,7 +3,7 @@
 [![.NET](https://github.com/C4co/bible_json/actions/workflows/dotnet.yml/badge.svg)](https://github.com/C4co/bible_json/actions/workflows/dotnet.yml)
 
 Extract content from [Biblia online](https://www.bibliaonline.com.br/vc)
-and transform to Json.
+and transform to Json and gzip.
 
 | Langs              | json | gzip |
 | ------------------ | ---- | ---- |

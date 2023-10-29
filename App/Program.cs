@@ -84,35 +84,35 @@ namespace App
         {
             //Gzip
 
-            // await Process(
-            //     url: "https://www.bibliaonline.com.br/acf/livros",
-            //     lang: "pt-br",
-            //     fileName: "bible_pt-br"
-            // );
+            await Process(
+                url: "https://www.bibliaonline.com.br/acf/livros",
+                lang: "pt-br",
+                fileName: "bible_pt-br"
+            );
 
-            // await Process(
-            //     url: "https://www.bibliaonline.com.br/acv/livros",
-            //     lang: "en",
-            //     fileName: "bible_en"
-            // );
+            await Process(
+                url: "https://www.bibliaonline.com.br/acv/livros",
+                lang: "en",
+                fileName: "bible_en"
+            );
 
-            // await Process(
-            //     url: "https://www.bibliaonline.com.br/bm1844/livros",
-            //     lang: "fr",
-            //     fileName: "bible_fr"
-            // );
+            await Process(
+                url: "https://www.bibliaonline.com.br/bm1844/livros",
+                lang: "fr",
+                fileName: "bible_fr"
+            );
 
-            // await Process(
-            //     url: "https://www.bibliaonline.com.br/itadio/livros",
-            //     lang: "it",
-            //     fileName: "bible_it"
-            // );
+            await Process(
+                url: "https://www.bibliaonline.com.br/itadio/livros",
+                lang: "it",
+                fileName: "bible_it"
+            );
 
-            // await Process(
-            //     url: "https://www.bibliaonline.com.br/sev/livros",
-            //     lang: "es",
-            //     fileName: "bible_es"
-            // );
+            await Process(
+                url: "https://www.bibliaonline.com.br/sev/livros",
+                lang: "es",
+                fileName: "bible_es"
+            );
 
             // Json
 

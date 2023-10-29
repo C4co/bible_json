@@ -13,10 +13,12 @@ namespace BibleJson.Services
     class BibleService
     {
         private readonly HttpClient _httpClient;
+        public string Lang;
 
-        public BibleService(HttpClient httpClient)
+        public BibleService(HttpClient httpClient, string lang)
         {
             _httpClient = httpClient;
+            Lang = lang;
         }
 
         public async Task<List<Book>> GetBooks(BookType bookType, string url)
@@ -46,6 +48,11 @@ namespace BibleJson.Services
                     var bookLink = link.Attributes["href"].Value ?? "null";
 
                     var abbrev = bookLink[^3..].Replace("/", "");
+
+                    if (Lang == "en") bookName = BibleTranslate.TranslateToEnglish(bookName);
+                    if (Lang == "fr") bookName = BibleTranslate.TranslateToFrench(bookName);
+                    if (Lang == "es") bookName = BibleTranslate.TranslateToSpanish(bookName);
+                    if (Lang == "it") bookName = BibleTranslate.TranslateToItalian(bookName);
 
                     Book book = new(
                         name: bookName,

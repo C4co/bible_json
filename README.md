@@ -43,6 +43,13 @@ dotnet run --project App
 dotnet run test
 ```
 
+### Showcase
+
+Check the app on Google Play Store: https://play.google.com/store/apps/details?id=cnc.holy_bible_digital
+
+![image](https://cdn.dribbble.com/userupload/14599209/file/original-ea4bc9775217335dd31996eba5d45442.png?resize=752x)
+
+
 ---
 
 @ Carlos Costa - 2023
